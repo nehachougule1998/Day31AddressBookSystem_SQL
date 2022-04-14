@@ -142,3 +142,37 @@ mysql>  select * from addressBook where city = 'Pune' ORDER BY firstName ASC;
 | Shruti    | Katraj  | Pune | Maharashtra | 52213 | 984233456567 | shruti04@gmail.com |
 +-----------+---------+------+-------------+-------+--------------+--------------------+
 1 row in set (0.01 sec)
+
+mysql> alter table Addressbook add bookname varchar(50) not null,add contacttype varchar(50) not null;
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Addressbook;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| firstname   | varchar(50)  | NO   |     | NULL    |       |
+| address     | varchar(100) | NO   |     | NULL    |       |
+| city        | varchar(50)  | NO   |     | NULL    |       |
+| state       | varchar(50)  | NO   |     | NULL    |       |
+| zip         | int          | NO   |     | NULL    |       |
+| phonenumber | double       | NO   |     | NULL    |       |
+| email       | varchar(100) | NO   |     | NULL    |       |
+| bookname    | varchar(50)  | NO   |     | NULL    |       |
+| contacttype | varchar(50)  | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+9 rows in set (0.02 sec)
+
+mysql> update Addressbook set bookname ='helloworld',contacttype='friend';
+Query OK, 3 rows affected (0.01 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select * from Addressbook;
++-----------+---------+--------+-------------+---------+--------------+--------------------+------------+-------------+
+| firstname | address | city   | state       | zip     | phonenumber  | email              | bookname   | contacttype |
++-----------+---------+--------+-------------+---------+--------------+--------------------+------------+-------------+
+| Neha      | Burli   | sangli | Maharashtra |  524004 |   9843261782 | neha12@gmail.com   | helloworld | friend      |
+| Anushka   | Mumbai  | Mumbai | Maharashtra | 5243232 |  98432344546 | nushki2@gmail.com  | helloworld | friend      |
+| Shruti    | Katraj  | Pune   | Maharashtra |   52213 | 984233456567 | shruti04@gmail.com | helloworld | friend      |
++-----------+---------+--------+-------------+---------+--------------+--------------------+------------+-------------+
+3 rows in set (0.00 sec)
