@@ -100,3 +100,25 @@ mysql>  select * from addressBook;
 | Anushka   | Mumbai  | Mumbai | Maharashtra | 5243232 | 98432344546 | nushki2@gmail.com |
 +-----------+---------+--------+-------------+---------+-------------+-------------------+
 2 rows in set (0.01 sec)
+
+mysql> insert into addressBook (firstName,address, city, state, zip, phoneNumber, email) VALUES
+    -> ('Shruti','Katraj', 'Pune', 'Maharashtra', 52213, 984233456567, 'shruti04@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from addressBook;
++-----------+---------+--------+-------------+---------+--------------+--------------------+
+| firstname | address | city   | state       | zip     | phonenumber  | email              |
++-----------+---------+--------+-------------+---------+--------------+--------------------+
+| Neha      | Burli   | sangli | Maharashtra |  524004 |   9843261782 | neha12@gmail.com   |
+| Anushka   | Mumbai  | Mumbai | Maharashtra | 5243232 |  98432344546 | nushki2@gmail.com  |
+| Shruti    | Katraj  | Pune   | Maharashtra |   52213 | 984233456567 | shruti04@gmail.com |
++-----------+---------+--------+-------------+---------+--------------+--------------------+
+3 rows in set (0.01 sec)
+
+mysql> select * from addressBook where city = 'sangli';
++-----------+---------+--------+-------------+--------+-------------+------------------+
+| firstname | address | city   | state       | zip    | phonenumber | email            |
++-----------+---------+--------+-------------+--------+-------------+------------------+
+| Neha      | Burli   | sangli | Maharashtra | 524004 |  9843261782 | neha12@gmail.com |
++-----------+---------+--------+-------------+--------+-------------+------------------+
+1 row in set (0.00 sec)
