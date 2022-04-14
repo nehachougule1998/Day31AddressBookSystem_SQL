@@ -122,3 +122,14 @@ mysql> select * from addressBook where city = 'sangli';
 | Neha      | Burli   | sangli | Maharashtra | 524004 |  9843261782 | neha12@gmail.com |
 +-----------+---------+--------+-------------+--------+-------------+------------------+
 1 row in set (0.00 sec)
+
+
+mysql> select city, Count(firstName) from addressBook group by city;
++--------+------------------+
+| city   | Count(firstName) |
++--------+------------------+
+| sangli |                1 |
+| Mumbai |                1 |
+| Pune   |                1 |
++--------+------------------+
+3 rows in set (0.00 sec)
