@@ -88,3 +88,15 @@ mysql> select * from addressBook;
 | Shruti    | Katraj  | Kolhapur | Maharashtra |   52213 | 984233456567 | shruti04@gmail.com |
 +-----------+---------+----------+-------------+---------+--------------+--------------------+
 3 rows in set (0.01 sec)
+
+mysql> delete from addressBook  where firstName = 'Shruti';
+Query OK, 1 row affected (0.01 sec)
+
+mysql>  select * from addressBook;
++-----------+---------+--------+-------------+---------+-------------+-------------------+
+| firstname | address | city   | state       | zip     | phonenumber | email             |
++-----------+---------+--------+-------------+---------+-------------+-------------------+
+| Neha      | Burli   | sangli | Maharashtra |  524004 |  9843261782 | neha12@gmail.com  |
+| Anushka   | Mumbai  | Mumbai | Maharashtra | 5243232 | 98432344546 | nushki2@gmail.com |
++-----------+---------+--------+-------------+---------+-------------+-------------------+
+2 rows in set (0.01 sec)
