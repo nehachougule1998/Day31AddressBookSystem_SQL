@@ -32,3 +32,27 @@ mysql> show databases;
 
 mysql>  use Address_Books_Service;
 Database changed
+
+mysql> create table AddressBook(
+    -> firstname varchar(50) not null,
+    -> address varchar(100) not null,
+    -> city varchar(50) not null,
+    -> state varchar(50) not null,
+    -> zip int not null,
+    -> phonenumber double not null,
+    -> email varchar(100) not null);
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> desc AddressBook;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| firstname   | varchar(50)  | NO   |     | NULL    |       |
+| address     | varchar(100) | NO   |     | NULL    |       |
+| city        | varchar(50)  | NO   |     | NULL    |       |
+| state       | varchar(50)  | NO   |     | NULL    |       |
+| zip         | int          | NO   |     | NULL    |       |
+| phonenumber | double       | NO   |     | NULL    |       |
+| email       | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+7 rows in set (0.01 sec)
