@@ -133,3 +133,12 @@ mysql> select city, Count(firstName) from addressBook group by city;
 | Pune   |                1 |
 +--------+------------------+
 3 rows in set (0.00 sec)
+
+
+mysql>  select * from addressBook where city = 'Pune' ORDER BY firstName ASC;
++-----------+---------+------+-------------+-------+--------------+--------------------+
+| firstname | address | city | state       | zip   | phonenumber  | email              |
++-----------+---------+------+-------------+-------+--------------+--------------------+
+| Shruti    | Katraj  | Pune | Maharashtra | 52213 | 984233456567 | shruti04@gmail.com |
++-----------+---------+------+-------------+-------+--------------+--------------------+
+1 row in set (0.01 sec)
