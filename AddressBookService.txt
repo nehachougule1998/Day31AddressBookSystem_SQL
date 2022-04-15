@@ -11,14 +11,14 @@ owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-mysql> create database Address_BookS_Service;
+mysql> create database Address_Books_System;
 Query OK, 1 row affected (0.01 sec)
 
 mysql> show databases;
 +--------------------------+
 | Database                 |
 +--------------------------+
-| address_books_service    |
+| address_books_system    |
 | addressbookservice       |
 | employee_payroll_service |
 | employeepayroll_service  |
@@ -30,7 +30,7 @@ mysql> show databases;
 +--------------------------+
 9 rows in set (0.00 sec)
 
-mysql>  use Address_Books_Service;
+mysql>  use Address_Books_System;
 Database changed
 
 mysql> create table AddressBook(
