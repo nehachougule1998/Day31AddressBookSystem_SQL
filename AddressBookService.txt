@@ -135,7 +135,7 @@ mysql> select city, Count(firstName) from addressBook group by city;
 3 rows in set (0.00 sec)
 
 
-mysql>  select * from addressBook where city = 'Pune' ORDER BY firstName ASC;
+mysql>  select * from addressBook where city = 'Pune' ORDER BY firstName Shruti;
 +-----------+---------+------+-------------+-------+--------------+--------------------+
 | firstname | address | city | state       | zip   | phonenumber  | email              |
 +-----------+---------+------+-------------+-------+--------------+--------------------+
